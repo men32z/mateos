@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('construction');
 });
 
-Route::get('/index', 'WebController@index');
+Route::get('/index', 'WebController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home_admin');
