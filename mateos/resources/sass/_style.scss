@@ -2,3 +2,13 @@
   width: 100%;
   max-width: 100%;
 }
+
+.footer-top {
+  a {
+    color: #ccc;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}

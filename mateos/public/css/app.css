@@ -5,6 +5,15 @@
   max-width: 100%;
 }
 
+.footer-top a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-top a:hover {
+  color: white;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
