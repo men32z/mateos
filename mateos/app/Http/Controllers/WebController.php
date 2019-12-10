@@ -9,4 +9,8 @@ class WebController extends Controller
     public function index(){
       return view('web.index');
     }
+
+    public function catalog(){
+      return view('web.products.index');
+    }
 }

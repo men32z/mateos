@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/index', 'WebController@index')->name('home');
+Route::get('/catalogo', 'WebController@catalog')->name('catalog');
 
 Auth::routes(['register' => false]);
 

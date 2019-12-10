@@ -10,10 +10,10 @@
   <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item {{$current_route_name == 'home' ? 'active':''}}">
-        <a class="nav-link" href="/">Inicio @php echo $current_route_name == 'home' ?$current_tag_text:'';@endphp</a>
+        <a class="nav-link" href="/index">Inicio @php echo $current_route_name == 'home' ?$current_tag_text:'';@endphp</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Catalogo</a>
+        <a class="nav-link" href="{{route('catalog')}}">Catalogo</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
