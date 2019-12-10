@@ -13,7 +13,7 @@
         <a class="nav-link" href="/">Inicio @php echo $current_route_name == 'home' ?$current_tag_text:'';@endphp</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Tienda</a>
+        <a class="nav-link" href="#">Catalogo</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
