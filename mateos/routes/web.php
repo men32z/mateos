@@ -20,9 +20,9 @@ Route::get('/catalogo', 'WebController@catalog')->name('catalog');
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home_admin');
-
 Route::middleware(['auth'])->group( function () {
+  Route::get('/home', 'HomeController@home')->name('home_admin');
+  Route::get('/admin', 'HomeController@index')->name('admin.index');
   Route::resource('products', 'ProductController');
   Route::resource('users', 'UserController')->middleware('admin');
 });

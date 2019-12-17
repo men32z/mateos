@@ -26,13 +26,14 @@
     <div id="app">
          @include('layouts.header')
 
+         @if (!isset($settings['menu_web']) || $settings['menu_web'])
+           @include('layouts.menu_web')
+         @endif
+
          @if (isset($settings['menu_admin']) && $settings['menu_admin'])
            @include('layouts.menu_admin')
          @endif
 
-         @if (!isset($settings['menu_web']) || $settings['menu_web'])
-           @include('layouts.menu_web')
-         @endif
 
         <main class="py-4">
             @yield('content')
