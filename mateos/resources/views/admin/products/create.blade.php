@@ -20,6 +20,7 @@
           <textarea id="product_description" name="description" class="form-control">
           </textarea>
         </div>
+        <image-upload-component></image-upload-component>
         <input type="submit" value="Guardar" class="btn btn-success mt-2">
       </form>
     </div>
