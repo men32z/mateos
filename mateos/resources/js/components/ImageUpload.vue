@@ -1,26 +1,25 @@
 <template>
   <div class="form-group">
     <label for="">Imagenes</label>
-    <input v-for="image in images" type="file" name="image[]">
-    <button type="button" class="btn btn-success" @click="add_image">+</button>
+    <input id="fileupload" type="file" multiple @change="handleFiles($event)" name="images[]" ref="fileInput" />
   </div>
 </template>
 <script>
   export default {
     methods: {
-      add_image(){
-        this.counter++;
-        this.images = this.counter;
+      handleFiles(evt){
+        //this.images = evt.target.files;
+        //console.log( evt.target.files);
       }
     },
     data(){
       return {
-        counter: 1,
-        images: []
+        images: '',
+        counter: 1
       };
     },
     mounted() {
-      console.log('mounted');
+      //console.log('mounted');
     }
   }
 </script>

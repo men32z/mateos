@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -34,9 +35,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        //
+        dd($request);
     }
 
     /**

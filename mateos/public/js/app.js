@@ -1877,22 +1877,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
-    add_image: function add_image() {
-      this.counter++;
-      this.images = this.counter;
+    handleFiles: function handleFiles(evt) {//this.images = evt.target.files;
+      //console.log( evt.target.files);
     }
   },
   data: function data() {
     return {
-      counter: 1,
-      images: []
+      images: '',
+      counter: 1
     };
   },
-  mounted: function mounted() {
-    console.log('mounted');
+  mounted: function mounted() {//console.log('mounted');
   }
 });
 
@@ -37337,28 +37334,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "form-group" },
-    [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Imagenes")]),
-      _vm._v(" "),
-      _vm._l(_vm.images, function(image) {
-        return _c("input", { attrs: { type: "file", name: "image[]" } })
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-success",
-          attrs: { type: "button" },
-          on: { click: _vm.add_image }
-        },
-        [_vm._v("+")]
-      )
-    ],
-    2
-  )
+  return _c("div", { staticClass: "form-group" }, [
+    _c("label", { attrs: { for: "" } }, [_vm._v("Imagenes")]),
+    _vm._v(" "),
+    _c("input", {
+      ref: "fileInput",
+      attrs: { id: "fileupload", type: "file", multiple: "", name: "images[]" },
+      on: {
+        change: function($event) {
+          return _vm.handleFiles($event)
+        }
+      }
+    })
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49743,8 +49731,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/men/dev/clients/mateos/mateos/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/men/dev/clients/mateos/mateos/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\dev\clients\mateos\mateos\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\dev\clients\mateos\mateos\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
