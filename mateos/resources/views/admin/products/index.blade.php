@@ -13,12 +13,19 @@
       <table class="table table-striped">
         <thead>
           <th scope="col">Nombre</th>
+          <th scope="col">Img</th>
         </thead>
         <tbody>
           @foreach ($products as $product)
             <tr>
               <td>
                 {{ $product->name }}
+              </td>
+              <td>
+                @if ($product->images() && $product->images()->first())
+                  <img src="{{ $product->images()->first()->url }}" style="width:50px;" alt="">
+                @endif
+
               </td>
             </tr>
           @endforeach

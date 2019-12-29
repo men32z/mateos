@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Helper;
 use App\Product;
+use App\Image;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 
@@ -37,7 +39,20 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        dd($request);
+        // save product
+        $product = Product::create($request->all());
+        // save images
+        if ($request->file('images')) {
+          $images = $request->file('images');
+          foreach ($images as $key => $image) {
+            $url_img = Helper::saveImg($image, $product->id.'-'.$key);
+            if ($url_img) {
+              Image::create(['url' => $url_img, 'product_id' => $product->id]);
+            }
+          }
+        }
+
+        return redirect()->route('products.index');
     }
 
     /**
