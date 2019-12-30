@@ -15,7 +15,6 @@ class Helper
         $input['imagename'] = $name.'-'.time().'.'.$image->extension();
 
         $destinationPath = public_path($p_path);
-        dd($destinationPath);
         $img = ImageInt::make($image->path());
         $img->resize(500, 700, function ($constraint) {
             $constraint->aspectRatio();
