@@ -7,31 +7,20 @@
         Filtros
       </div>
       <div class="col-12 col-md-8 col-lg-9 row">
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
-        <div class="col-6 col-md-4 product">
-          <div class="img-container" > <img src="/images/no-image.jpg" alt=""></div>
-          <h3>Titulo del producto</h3>
-        </div>
+        @foreach ($products as $key => $product)
+          <div class="col-6 col-md-4 product">
+            <div class="img-container" >
+              @if ($product->images() && $product->images()->first())
+                <img src="{{ $product->images()->first()->url }}" alt="">
+              @else
+                <img src="/images/no-image.jpg" alt="">
+              @endif
+             </div>
+            <h3>{{$product->name}}</h3>
+          </div>
+        @endforeach
       </div>
+      {{ $products->links() }}
     </div>
   </div>
 @endsection

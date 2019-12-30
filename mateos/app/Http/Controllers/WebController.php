@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -11,6 +12,7 @@ class WebController extends Controller
     }
 
     public function catalog(){
-      return view('web.products.index');
+      $products = Product::paginate(10);
+      return view('web.products.index', compact('products'));
     }
 }
