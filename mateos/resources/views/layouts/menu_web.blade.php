@@ -13,10 +13,13 @@
         <a class="nav-link" href="/index">Inicio @php echo $current_route_name == 'home' ?$current_tag_text:'';@endphp</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{route('aboutus')}}">Nosotros</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{route('catalog')}}">Catalogo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="{{route('contact')}}">Contacto</a>
       </li>
     </ul>
 
