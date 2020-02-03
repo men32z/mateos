@@ -3,7 +3,7 @@ rm -R ../public_html/*
 cp -R mateos/public/. ../public_html
 
 # link to storage
-ln -s /home/mateosenlinea/mateos/mateos/storage/app/public/ /home/mateosenlinea/mateos/mateos/public/storage
+#ln -s /home/mateosenlinea/mateos/mateos/storage/app/public/ /home/mateosenlinea/mateos/mateos/public/storage
 ln -s /home/mateosenlinea/mateos/mateos/storage/app/public/ /home/mateosenlinea/public_html/storage
 
 # fix index file
