@@ -19,6 +19,7 @@ Route::get('/index', 'WebController@index')->name('home');
 Route::get('/nosotros', 'WebController@aboutus')->name('aboutus');
 Route::get('/contact', 'WebController@contact')->name('contact');
 Route::get('/catalogo', 'WebController@catalog')->name('catalog');
+Route::post('/contacto', 'WebController@send')->name('email.send');
 
 Auth::routes(['register' => false]);
 
