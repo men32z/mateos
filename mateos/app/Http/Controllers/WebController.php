@@ -27,6 +27,7 @@ class WebController extends Controller
     }
 
     public function send(Request $request) {
+      //mail pass fc0Y0bgg&_@0
       $this->validate($request, [ 'name' => 'required', 'email' => 'required|email', 'message' => 'required', 'token' => 'required' ]);
       //ContactUS::create($request->all());
 
@@ -53,14 +54,14 @@ class WebController extends Controller
                'email' => $request->get('email'),
                'user_message' => $request->get('message')
                ), function($message){
-               $message->from('contact@mateoesenlinea.com');
-               $message->to('preza.luis@gmail.com', 'WebMaster')->subject('Contacto en Web');
+               $message->from('contact2@mateoesenlinea.com');
+               $message->to('contact2@mateoesenlinea.com', 'WebMaster')->subject('Contacto en Web');
 
            });
 
         return redirect()->route('contact')->with('success', 'Gracias por contactarnos!');
       } else {
-        return back()->with('error', 'error con el captcha, recomendamos usar Google Chrome o Firefox.');
+        return back()->with('error', 'error con el captcha, recomendamos usar Google Chrome o Firefox. o intente refrescar la pagina.');
       }
 
      }
