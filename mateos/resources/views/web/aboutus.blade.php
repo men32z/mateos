@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="row col-12 col-md-8">
+      <div class="row col-12 col-md-8 about-us-text pr-md-5">
         <div class="col-sm-12">
           <h2><b class="text-c-red">M</b>isión</h2>
           <p>Ofrecer a nuestros clientes  productos de calidad, a precios cómodos que cumplan con sus necesidades y exigencias, abarcando sus gustos de acuerdo a su estilo de ver y vivir la vida. Añadiendo una experiencia de compra inigualable por medio de diferentes canales de venta.</p>
