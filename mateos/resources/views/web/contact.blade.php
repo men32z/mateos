@@ -9,7 +9,7 @@
     frameborder="0" style="border:0; width:100%; height:400px;" allowfullscreen=""></iframe>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row my-3 py-3">
       <div class="col-md-6">
         <h2>Datos de contacto</h2>
         <p class="mt-2">

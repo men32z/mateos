@@ -3,11 +3,11 @@
     <div class="row">
       <div class="col-12">
         <a href="#">Terminos y condiciones</a>
-        <a href="#">Contacto</a>
+        <a href="{{route('contact')}}">Contacto</a>
       </div>
     </div>
   </div>
 </nav>
 <footer class="footer-bot">
-  
+
 </footer>

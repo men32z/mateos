@@ -11,11 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('construction');
 });
+*/
 
-Route::get('/index', 'WebController@index')->name('home');
+Route::get('/', 'WebController@index')->name('home');
 Route::get('/nosotros', 'WebController@aboutus')->name('aboutus');
 Route::get('/contact', 'WebController@contact')->name('contact');
 Route::get('/catalogo', 'WebController@catalog')->name('catalog');
