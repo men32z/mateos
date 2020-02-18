@@ -6,7 +6,7 @@
 {{--      <div class="col-12 col-md-4 col-lg-3">
         Filtros
       </div>--}}
-      <div class="col-12 col-md-8 offset-md-2 row">
+      <div class="col-12 row">
         @if (count($products)<1)
           <h3>Aun no hay productos, vuelve más tarde </h3>
         @endif
@@ -23,7 +23,9 @@
           </div>
         @endforeach
       </div>
-      {{ $products->links() }}
+      <div class="col-12">
+        {{ $products->links() }}
+      </div>
     </div>
   </div>
 @endsection
