@@ -13,7 +13,7 @@
       <div class="col-md-6">
         <h2>Datos de contacto</h2>
         <p class="mt-2">
-          <i class="fas fa-map-marker-alt"></i> Local 81 segunda sección, Centro comercial las palmas, Villa Hidalgo, Jalisco.
+          <i class="fas fa-map-marker-alt"></i> Local 7 segunda sección, y local 71 primera sección, Centro comercial las palmas, Villa Hidalgo, Jalisco.
         </p>
         <div class="d-flex social-links">
           <a href="https://wa.me/4491684618">
